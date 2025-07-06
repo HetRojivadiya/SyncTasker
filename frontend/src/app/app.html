@@ -1,0 +1,8 @@
+<button (click)="changeLanguage('en')">English</button>
+<button (click)="changeLanguage('hi')">हिन्दी</button>
+
+<h1>{{ 'HELLO' | translate }}</h1>
+<p>{{ 'WELCOME' | translate }}</p>
+
+<router-outlet></router-outlet>
+<app-spinner></app-spinner>
