@@ -1,1 +1,22 @@
-<div class="spinner-overlay" *ngIf="spinnerService.isLoading()">Loading...</div>
+<div class="spinner-overlay" *ngIf="spinnerService.isLoading()">
+  <div class="spinner-container">
+    <div class="spinner">
+      <div class="progress-ring"></div>
+      <div class="spinner-inner">
+        <div class="spinner-core"></div>
+      </div>
+    </div>
+    <div class="loading-text">Loading</div>
+    <div class="loading-dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+  <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+</div>

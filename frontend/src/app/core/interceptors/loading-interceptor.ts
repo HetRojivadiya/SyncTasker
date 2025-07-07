@@ -10,13 +10,10 @@ export class LoadingInterceptor implements HttpInterceptor {
   constructor(private spinner: SpinnerService) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-
     const disableSpinner = req.context.get(DISABLE_SPINNER);
-
     if (!disableSpinner) {
       this.spinner.show();
     }
-
     return next.handle(req).pipe(
       finalize(() => {
         if (!disableSpinner) {

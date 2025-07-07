@@ -6,9 +6,6 @@ import { environment } from '../../../environments/environment';
 export class ApiBaseInterceptor implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
-
-    console.log('ApiBaseInterceptor', req);
-
     if (req.url.startsWith('api/')) {
       req = req.clone({ url: `${environment.apiUrl}/${req.url}` });
     }

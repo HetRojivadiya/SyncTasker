@@ -26,7 +26,7 @@ export class App {
   }
 
   getData() {
-    this.httpBaseService.get('api/dhfghjgdfs').pipe(take(1)).subscribe(data => {
+    this.httpBaseService.get('api/tasks').pipe(take(1)).subscribe(data => {
       console.log(data);
     }, error => {
       console.error('Error fetching data:', error);
